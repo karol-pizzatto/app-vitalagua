@@ -708,13 +708,35 @@ input:-webkit-autofill:focus {
     }
 
     .cabecalho__menu {
-        justify-content: center;       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  
+        gap: 0.5rem;
+        padding: 1rem;     
+    }
+
+    .cabecalho__menu__link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
     }
 
     .linha-cadastro {
         display: grid;
         grid-template-columns: 1fr 2fr;
         align-items: center;
+    }
+
+    thead th {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        padding: 6px 8px;
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    #tabelaCliente {
+        font-size: 0.8rem;
     }
 }
 
