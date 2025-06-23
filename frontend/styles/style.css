@@ -480,6 +480,9 @@ input, select, textarea {
 #tabelaClientes th[data-col="cidade"],
 #tabelaClientes td.col-cidade {
     width: 2.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 /* Coluna Status*/
@@ -520,6 +523,7 @@ input, select, textarea {
 #tabelaClientes td.col-status {
   display: none !important;
 }
+
 .status-tag {
     padding: 3px 8px;
     border-radius: 12px;
@@ -667,11 +671,12 @@ input:-webkit-autofill:focus {
         font-size: 13px;
         line-height: 1.2;   
     }
+
     #tabelaClientes th[data-col="acoes"],
     #tabelaClientes th:last-child,
     #tabelaClientes td:last-child {
-    width: 10%;
-    text-align: center;
+        width: 10%;
+        text-align: center;
 }
 }
 
@@ -794,9 +799,9 @@ input:-webkit-autofill:focus {
     }
 
     .botao-salvar {
-            width: fit-content;
-            margin-top: 10px;
-            font-size: 16px;
+        width: fit-content;
+        margin-top: 10px;
+        font-size: 16px;
     }
 
     /* TABELA */                          
