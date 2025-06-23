@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">                                                          <!-- Para o navegador entender os caracteres especiais -->  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                            <!-- Para o navegador entender a compatibilidade, especificamento para o EDGE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!-- Para a janela de visualização ficar boa em varios dispositivos-->
+    <meta name="author" content="Ana Carolina">
+    <link rel="stylesheet" href="styles/style.css">                                           <!-- Link para o arquivo CSS -->
+    <title>Vital Água - Gerenciamento</title>
+</head>    
+<body>
+    <header class="cabecalho">       
+        <nav class="cabecalho__menu">                   <!-- para navegar nas paginas -->
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="sales.html">Vendas</a>
+            <a class="cabecalho__menu__link" href="customers.html">Clientes</a>
+            <a class="cabecalho__menu__link" href="registered.html">Clientes cadastrados</a>
+            <a class="cabecalho__menu__link" href="stock.html">Estoque</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre</a>
+        </nav>
+            <button class="botao-toggle" onclick="alternarModo()">🌙</button>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">                <!-- a class dentro de outra, precisa carregar o nome da classe pai -->
+            <h1 class="apresentacao__conteudo__titulo">Controle de estoque. <strong class="destaque-titulo">Testando o sistema de controle</strong></h1>
+            <p class="apresentacao__conteudo__subtitulo">É um prazer ter você aqui!
+                                                         Nosso sistema foi pensado com carinho para facilitar sua rotina, otimizar o controle de estoque e tornar sua gestão mais leve, fluida e eficiente — como uma água cristalina descendo pela serra.</p>
+            <p class="apresentacao__conteudo__subtitulo">Aqui, você vai encontrar ferramentas práticas, alertas inteligentes e um visual que inspira frescor, organização e tranquilidade. Fique à vontade para explorar, cadastrar, acompanhar e transformar sua gestão com a gente! Se precisar de ajuda, é só chamar. A casa é sua.</p>
+           
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Acesse nossas redes:</h2>
+                <a class="apresentacao__links__botao" href="https://www.instagram.com/vitalaguadc/">Instagram
+                    <img src="imagens/instagram.png" alt="Logo Instagram"> 
+                </a>
+                <a class="apresentacao__links__botao" href="https://api.whatsapp.com/message/ECDIOG7B3FBGO1?autoload=1&app_absent=0">Whatsapp
+                    <img src="imagens/github.png" alt="Logo Whatsapp">
+                </a>
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src = "imagens/Imagem.png" alt = "Logo Vital Água">
+    </main>
+    <footer class="rodape">        
+        <p class="rodape__texto">Desenvolvido por Ana Carolina</p>
+    </footer>
+    <script src="darkmode.js"></script>
+</body>
+</html>

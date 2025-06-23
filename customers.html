@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ana Carolina" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <title>Vital Água - Clientes</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__menu">
+      <a class="cabecalho__menu__link" href="index.html">Home</a>
+      <a class="cabecalho__menu__link" href="sales.html">Vendas</a>
+      <a class="cabecalho__menu__link" href="customers.html">Clientes</a>
+      <a class="cabecalho__menu__link" href="registered.html">Clientes cadastrados</a>
+      <a class="cabecalho__menu__link" href="stock.html">Estoque</a>
+      <a class="cabecalho__menu__link" href="about.html">Sobre</a>
+    </nav>
+    <button class="botao-toggle" onclick="alternarModo()">🌙</button>
+  </header>
+
+  <main>
+    <section class="cadastroCliente">
+      <!-- Nome -->
+      <div class="linha-cadastro field" id="field-nome">
+        <label class="cadastroCliente__dados" for="nomeCliente">Nome:</label>
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="nomeCliente"
+          placeholder="Digite o nome"
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- CEP -->
+      <div class="linha-cadastro field" id="field-cep">
+        <label class="cadastroCliente__dados" for="cepCliente">CEP:</label>
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="cepCliente"
+          placeholder="Insira o CEP"
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Endereço -->
+      <div class="linha-cadastro field" id="field-endereco">
+        <label class="cadastroCliente__dados" for="enderecoCliente"
+          >Endereço:</label
+        >
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="enderecoCliente"
+          placeholder="Digite o endereço..."
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Número -->
+      <div class="linha-cadastro field" id="field-numero">
+        <label class="cadastroCliente__dados" for="numCliente">Número:</label>
+        <input
+          class="cadastroCliente__campo__campo-menor"
+          type="text"
+          id="numCliente"
+          placeholder=" "
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Bairro -->
+      <div class="linha-cadastro field" id="field-bairro">
+        <label class="cadastroCliente__dados" for="bairroCliente">Bairro:</label>
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="bairroCliente"
+          placeholder=" "
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Cidade -->
+      <div class="linha-cadastro field" id="field-cidade">
+        <label class="cadastroCliente__dados" for="cidadeCliente">Cidade:</label>
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="cidadeCliente"
+          placeholder=" "
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Complemento -->
+      <div class="linha-cadastro field" id="field-complemento">
+        <label
+          class="cadastroCliente__dados"
+          for="complementoCliente"
+          >Complemento:</label
+        >
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="complementoCliente"
+          placeholder=" "
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Telefone -->
+      <div class="linha-cadastro field" id="field-telefone">
+        <label class="cadastroCliente__dados" for="telefoneCliente"
+          >Telefone:</label
+        >
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="telefoneCliente"
+          placeholder="Telefone para contato"
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- CPF/CNPJ -->
+      <div class="linha-cadastro field" id="field-documento">
+        <label class="cadastroCliente__dados" for="documentoCliente"
+          >CPF/CNPJ:</label
+        >
+        <input
+          class="cadastroCliente__campo"
+          type="text"
+          id="documentoCliente"
+          placeholder=" "
+        />
+        <span class="error-message"></span>
+      </div>
+
+      <!-- Botão Salvar -->
+      <div class="linha-cadastro linha-salvar">
+        <button onclick="salvarCliente()" class="botao-salvar">Salvar</button>
+        <span id="mensagemSucesso" class="mensagem-sucesso"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="customers.js" defer></script>
+  <script src="darkmode.js" defer></script>
+</body>
+</html>

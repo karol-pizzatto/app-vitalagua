@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ana Carolina" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>Vital Água – Clientes Cadastrados</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="cabecalho__menu">
+      <a class="cabecalho__menu__link" href="index.html">Home</a>
+      <a class="cabecalho__menu__link" href="sales.html">Vendas</a>
+      <a class="cabecalho__menu__link" href="customers.html">Clientes</a>
+      <a class="cabecalho__menu__link active" href="registered.html">Clientes cadastrados</a>
+      <a class="cabecalho__menu__link" href="stock.html">Estoque</a>
+      <a class="cabecalho__menu__link" href="about.html">Sobre</a>
+    </nav>
+    <button class="botao-toggle" onclick="alternarModo()">🌙</button>
+  </header>
+
+  <main>
+        <section class="cadastros__prontos">
+            <div class="lista-clientes">
+                    <div class="tabela-clientes-container">
+                        <div class="controle-colunas">
+
+                            <button onclick="toggleColuna('nome')" id="toggle-nome" class="toggle-coluna">
+                                <span id="emoji-nome">🙊</span> Nome
+                            </button>
+                            <button onclick="toggleColuna('endereco')" id="toggle-endereco" class="toggle-coluna">
+                                <span id="emoji-endereco">🙊</span> Endereço
+                            </button>
+                            <button onclick="toggleColuna('telefone')" id="toggle-telefone" class="toggle-coluna">
+                                <span id="emoji-telefone">🙊</span> Telefone
+                            </button>
+                            <button onclick="toggleColuna('cidade')" id="toggle-cidade" class="toggle-coluna">
+                                <span id="emoji-cidade">🙊</span> Cidade
+                            </button>
+                            <button onclick="toggleColuna('status')" id="toggle-status" class="toggle-coluna">
+                                <span id="emoji-status">🙊</span> Status
+                            </button>
+                            <button onclick="toggleColuna('acoes')" id="toggle-acoes" class="toggle-coluna">
+                                <span id="emoji-acoes">🙊</span> Ações
+                            </button>
+
+                        </div>
+                    <div class="filtro-linhas">
+                        <label for="colunaFiltro">Filtrar por:</label>
+                        <select id="colunaFiltro">
+                            <option value="nome">Nome</option>
+                            <option value="endereco">Endereço</option>
+                            <option value="telefone">Telefone</option>
+                            <option value="cidade">Cidade</option>
+                        </select>
+                        <input type="text" id="textoFiltro" placeholder="Digite o texto…" />
+                    </div>
+
+                    <table id="tabelaClientes">
+                        <thead>
+                        <tr>
+                            <th data-col="nome">Nome</th>
+                            <th data-col="endereco">Endereço</th>
+                            <th data-col="telefone">Telefone</th>
+                            <th data-col="cidade">Cidade</th>
+                            <th data-col="status">Status</th>
+                            <th data-col="acoes">Ações</th>
+                        </tr>
+                        </thead>
+                        <tbody id="listaClientes"></tbody>
+                    </table>
+                     </div>
+            </div>
+        </section>
+  </main>
+    <script src="registered.js" defer></script>
+    <script src="darkmode.js" defer></script>
+</body>
+</html>
