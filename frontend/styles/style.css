@@ -105,24 +105,23 @@ input, select, textarea {
 /*CABEÇALHO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .cabecalho {    
-    padding: 2% 0% 0% 10%;           /*esta centralizado para celular*/    
+    padding: 1rem;
 }
 
 .cabecalho__menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.9rem;               /*espaçamento entre os links do menu */
-    /*justify-content: center;*/
+    justify-content: center;
 }        
 
 .cabecalho__menu__link {
-    display: flex;  
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
+    /*display: flex;*/  
+    /*text-align: center;*/
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: bold;
-    color: var(--cor-botao);
     text-decoration: none;
-    transition: color 0.2s;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -448,6 +447,7 @@ input, select, textarea {
     min-width: 700px;
     table-layout: fixed;
     border-collapse: collapse;
+    border-spacing: 0;
     background-color: var(--cor-branco);
     font-family: var(--fonte-texto1);
     font-weight: 300;
@@ -456,15 +456,14 @@ input, select, textarea {
 
 #tabelaClientes th,
 #tabelaClientes td {
-    padding: 12px 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    font-size: 1rem;
+    padding: 4px 6px;
+    font-size: 13px;
+    line-height: 1.2;
     white-space: normal;
     font-family: var(--fonte-texto1);
-    font-weight: 300;
-    overflow-wrap: break-word;    /* sintaxe moderna */
-    word-break: break-all;  
+    font-weight: 400;
+    border: 1px solid #999; /* borda visível */
+    box-sizing: border-box;
 }
 
 /* Coluna Nome e Endereço mais largas */
@@ -486,14 +485,14 @@ input, select, textarea {
 /* Coluna Status*/
 #tabelaClientes th[data-col="status"],
 #tabelaClientes td.col-status {
-    width: 0.5rem;
+    width: 4%;
 }
 
 /*coluna de ações*/
 #tabelaClientes th[data-col="acoes"],
 #tabelaClientes th:last-child,
 #tabelaClientes td:last-child {
-    width: 1.9rem;
+    width: 10%;
     text-align: center;
 }
 
@@ -517,6 +516,10 @@ input, select, textarea {
     font-weight: bold;
 }
 
+#tabelaClientes th[data-col="status"],
+#tabelaClientes td.col-status {
+  display: none !important;
+}
 .status-tag {
     padding: 3px 8px;
     border-radius: 12px;
@@ -630,18 +633,6 @@ input:-webkit-autofill:focus {
         width: auto;
     }
 
-/*feito pelo gpt para a pag de clientes*/
-    #tabelaClientes td:nth-child(2),
-    #tabelaClientes th:nth-child(2) {
-        width: 30%;
-    }
-
-    #tabelaClientes td:last-child,
-    #tabelaClientes th:last-child {
-        width: 120px;
-    }
-}
-
 
 /* Deixa a tela de formulario tudo em 1 coluna no celular */
 
@@ -670,7 +661,18 @@ input:-webkit-autofill:focus {
         justify-content: center;        /*centraliza na pagina*/
         width: auto;
     }
-   
+    #tabelaClientes td,
+    #tabelaClientes th {
+        padding: 4px 6px;
+        font-size: 13px;
+        line-height: 1.2;   
+    }
+    #tabelaClientes th[data-col="acoes"],
+    #tabelaClientes th:last-child,
+    #tabelaClientes td:last-child {
+    width: 10%;
+    text-align: center;
+}
 }
 
 /* === TELAS MÉDIAS: Tablets (600px–991px) === */
@@ -696,7 +698,7 @@ input:-webkit-autofill:focus {
 
     #tabelaClientes td:last-child,
     #tabelaClientes th:last-child {
-        width: 100px;
+        width: 10%;
     }
 }
 
@@ -730,8 +732,6 @@ input:-webkit-autofill:focus {
         font-size: 0.75rem;
         white-space: nowrap;
         padding: 6px 8px;
-        word-break: break-word;
-        white-space: normal;
         text-align: center;
     }
     
@@ -749,7 +749,17 @@ input:-webkit-autofill:focus {
     }
 
     .cabecalho__menu {
-        justify-content: center;       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;     
+    }
+
+    .cabecalho__menu__link {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.5rem;
     }
 
   /* FORMULÁRIO */
@@ -817,7 +827,4 @@ input:-webkit-autofill:focus {
             font-size: 11px;
     }
 }
-
-/*FIM DO RESPONSIVO --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
+}
