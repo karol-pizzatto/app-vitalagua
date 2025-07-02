@@ -97,6 +97,17 @@ let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
   limparFormulario();
   clearFieldErrors();
 }
+//para o menu cabeçalho
+document.addEventListener('DOMContentLoaded', () => {
+  const menuCheckbox = document.getElementById('menu');            
+  const menuContainer = document.querySelector('.container__menu'); 
+
+ 
+  menuContainer.addEventListener('mouseleave', () => {
+    menuCheckbox.checked = false;
+  });
+});
+
   // redireciona para a lista, se quiser:
   //window.location.href = 'registered.html';
 

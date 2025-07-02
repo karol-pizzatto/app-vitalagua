@@ -5,24 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">                            <!-- Para o navegador entender a compatibilidade, especificamento para o EDGE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!-- Para a janela de visualização ficar boa em varios dispositivos-->
     <meta name="author" content="Ana Carolina">
+    <link rel="stylesheet" href="frontend/styles/reset.css">
     <link rel="stylesheet" href="frontend/styles/style.css">                                           <!-- Link para o arquivo CSS -->
     <title>Vital Água - Gerenciamento</title>
 </head>    
 <body>
-    <header class="cabecalho">       
-        <nav class="cabecalho__menu">                   <!-- para navegar nas paginas -->
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="sales.html">Vendas</a>
-            <a class="cabecalho__menu__link" href="customers.html">Clientes</a>
-            <a class="cabecalho__menu__link" href="registered.html">Clientes cadastrados</a>
-            <a class="cabecalho__menu__link" href="stock.html">Estoque</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre</a>
-        </nav>
-            <button class="botao-toggle" onclick="alternarModo()">🌙</button>
-    </header>
+  <header class="cabecalho">
+    <div class="container__menu">
+        <input type="checkbox" id="menu" class="container__botao">
+        <label for="menu">
+        <span class="cabecalho__menu-hamburguer  container__imagemMenu"></span>
+        </label> 
+      <ul class="lista-menu">
+          <li class="lista-menu__titulo">Categorias</li>
+            <li class="lista-menu__itens"><a href="index.html" class="lista-menu__link">Home</a></li>          
+        <li>
+          <details class="lista-menu__dropdown">
+            <summary class="lista-menu__summary lista-menu__link">Clientes</summary>
+            <ul class="lista-submenu">
+              <li class="lista-menu__itens"><a href="customers.html" class="lista-menu__link">Cadastrar</a></li>
+              <li class="lista-menu__itens"><a href="registered.html" class="lista-menu__link">Clientes cadastrados</a></li>             
+            </ul>
+          </details>
+        </li>
+        <li class="lista-menu__itens"><a href="testes.html" class="lista-menu__link">Testes</a></li>        
+      </ul>
+    </div>
+        <button class="botao-toggle" onclick="alternarModo()">Modo escuro 🌙</button>
+  </header>
     <main class="apresentacao">
         <section class="apresentacao__conteudo">                <!-- a class dentro de outra, precisa carregar o nome da classe pai -->
-            <h1 class="apresentacao__conteudo__titulo">Controle de estoque. <strong class="destaque-titulo">Testando o sistema de controle</strong></h1>
+            <h1 class="apresentacao__conteudo__titulo">Controle de estoque. <span class="destaque-titulo">Testando o sistema de controle</strong></h1>
             <p class="apresentacao__conteudo__subtitulo">É um prazer ter você aqui!
                                                          Nosso sistema foi pensado com carinho para facilitar sua rotina, otimizar o controle de estoque e tornar sua gestão mais leve, fluida e eficiente — como uma água cristalina descendo pela serra.</p>
             <p class="apresentacao__conteudo__subtitulo">Aqui, você vai encontrar ferramentas práticas, alertas inteligentes e um visual que inspira frescor, organização e tranquilidade. Fique à vontade para explorar, cadastrar, acompanhar e transformar sua gestão com a gente! Se precisar de ajuda, é só chamar. A casa é sua.</p>

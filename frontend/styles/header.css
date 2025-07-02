@@ -1,0 +1,118 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+.botao-toggle {
+    background-color: transparent;
+    color: var(--cor-terciaria);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cabecalho {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__menu {
+    position: relative;
+    z-index: 1000;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/menu-hamburguer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.container__imagemMenu {
+    padding: 1em;
+}
+
+.lista-menu {
+    position: absolute;
+    top: 100; 
+    max-width: 12.5rem; 
+    list-style: none;
+    background: var(--cor-fundo-boxCadastro);
+    border: 1px outset var(--cor-bordainput);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transform: translateX(-110%);
+    transition: opacity .3s, transform .3s;   
+    z-index: 9999;
+    overflow-y: auto;
+    border-radius: 7px;
+}
+
+.container__botao:checked ~ .lista-menu {
+    transform: translateX(0);
+}
+
+.container__botao {
+    display: none;
+}
+
+.lista-menu__titulo, .lista-menu__itens, .lista-menu__summary {
+    padding: 1rem;
+    font-family: var(--fonte-textoRedondo);
+}
+
+.lista-menu__titulo {
+    color: var(--cor-azuldodger);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lista-menu__link {                 /*sem os subitens*/
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--cor-terciaria);
+}
+
+.lista-menu__dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--cor-terciaria);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-menu__dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.lista-menu__dropdown summary::after {
+    content: "\f053";   
+    font-family: "font awesome 6 free";
+    font-weight: 900;                                                         
+    transition: transform 0.3s ease;
+}
+
+.lista-menu__dropdown[open] summary::after {
+    transform: rotate(-90deg) scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.lista-submenu {
+    list-style: none;
+}
+
+.lista-submenu a {
+    display: block;
+    padding: 0 1.5rem;
+}
+
+.lista-menu__itens a:hover, 
+.lista-submenu a:hover {
+    text-decoration: underline;
+}
+

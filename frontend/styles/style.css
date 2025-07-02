@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); /*fonte do texto*/
+@import url("../styles/responsive.css");
+@import url("../styles/header.css");
+@import url("../styles/testes.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*fonte do texto*/
 
 
 /*CORES --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -6,15 +9,19 @@
     --cor-principal: mediumblue;
     --cor-secundaria: darkblue;
     --cor-terciaria: black;
-    --cor-fundo: #efe9e0;
+    --cor-fundo: #d9e4ee;
     --cor-botao: #1E90FF;
     --cor-fundobotao: #114b86; 
     --cor-bordainput: #a6a6a6;
-    --cor-fundo-boxCadastro: #f0f8ff;
+    --cor-fundo-boxCadastro: #f4f8fb;                   /*#f0f8ff*/
     --cor-branco: white;
+    --cor-azuldodger: #1a8cff;
     --cor-link: hotpink;
+    --cor-azuldegrade: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(0, 212, 255, 1) 100%);
     --fonte-texto: "Roboto", sans-serif; 
     --fonte-texto1: "Savate", sans-serif;
+    --fonte-textoRedondo: "Poppins", sans-serif;
+
     
 }
 
@@ -22,14 +29,15 @@ body.dark-mode {
     --cor-principal: #61dafb;
     --cor-secundaria: #3a8bc9;
     --cor-terciaria: white;
-    --cor-fundo: #121212;
+    --cor-fundo: #121212;                  
     --cor-botao: #3182ce;
     --cor-fundobotao: #22578c;
-    --cor-bordainput: #444;
+    --cor-bordainput: rgba(255,255,255,0.1);
     --cor-fundo-boxCadastro: #333333;
     --cor-branco: #eeeeee;
     --cor-link: #ff77dd;
 }
+
 /*FIM DAS CORES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 body {    
@@ -37,6 +45,7 @@ body {
     box-sizing: border-box;             /* elemento filho vai se encaixar no elemento pai */
     background-color: var(--cor-fundo);
     color: var(--cor-secundaria);
+    font-family: var(--fonte-textoRedondo);
 }
 
 * {                                 /* mexe em toda a pagina, reseta os espaçamentos padroes da pagina */
@@ -102,29 +111,6 @@ input, select, textarea {
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*CABEÇALHO ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.cabecalho {    
-    padding: 1rem;
-}
-
-.cabecalho__menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.9rem;               /*espaçamento entre os links do menu */
-    justify-content: center;
-}        
-
-.cabecalho__menu__link {
-    /*display: flex;*/  
-    /*text-align: center;*/
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*CORPO DA PÁGINA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -137,55 +123,30 @@ input, select, textarea {
 }
 
 .apresentacao__conteudo {
-    width: 50%;                       /* largura do conteudo escrito no caso*/
+    width: 80%;                       /* largura do conteudo escrito no caso*/
     display: flex;
     flex-direction: column;            /* exibe o conteudo em coluna */
     gap: 40px;                         /* espaçamento entre os elementos do conteudo */
+    font-family: var(--fonte-textoRedondo);
 }
 
 .apresentacao__conteudo__titulo {
     font-size: 2.25rem;                    /* tamanho da fonte do titulo */
     font-family: "Open Sans", sans-serif;  
-    color: var(--cor-terciaria);      
+    color: var(--cor-terciaria); 
+    width: 100%; 
 }
 
 .destaque-titulo {                       /* pode ser usado STRONG/SPAN para destaque de texto */
     color: var(--cor-principal);
-    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
 }
+
 .apresentacao__conteudo__subtitulo {            /*no lugar de subtitulo é texto*/
     font-size: 1,5rem;
     font-family: "Open Sans", sans-serif; 
     color: var(--cor-terciaria); 
     text-align: center;                        /*alinha o texto no meio da box*/
-}
-.apresentacao__conteudo__titulo1 {
-    font-size: 2,25rem;                    /* tamanho da fonte do titulo */
-    font-family: "Open Sans", sans-serif;  
-    color: var(--cor-terciaria); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.destaque-titulo {
-    color: var(--cor-principal);
-    font-size: 2rem;
-}
-.apresentacao__conteudo__texto__t {
-    font-size: 1,5rem;
-    font-family: "Open Sans", sans-serif; 
-    font-weight: lighter;
-    color: var(--cor-terciaria); 
-    font-weight: 400;  
-    text-indent: 50px;              
-    text-align: justify;              
-    color: var(--cor-principal);
-    letter-spacing: 3px;                /*espaço entre letras*/
-    line-height: 1.5;                   /* espaçamento entre linhas */  
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .apresentacao__links {
@@ -225,6 +186,7 @@ input, select, textarea {
 
 .apresentacao__imagem {
     width: 30%;
+    padding-left: 50%;
 }
 
 .rodape {
@@ -237,75 +199,72 @@ input, select, textarea {
 }
 
 /*PAGINA DE CLIENTES ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+:root {
+    --altura-input: 2rem;
+    --padding-input: 0.4rem;
+}
+
 .cadastroCliente {
     background-color: var(--cor-fundo-boxCadastro);
     display: grid;
     grid-template-columns: 2fr 1fr; /* Nome (2x maior), Telefone */
-    gap: 0.5rem; 
-    align-items: center;
-    padding: 20px;
-    max-width: 600px;
-    min-height: 400px;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
-    flex-grow: 5;
-    color: var(--cor-terciaria);
+    gap: 0.5rem;
+    padding: 2%;
+    max-width: 2000px;
+    min-height: 500px;
+    margin: 20px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);              /*#ccc*/
 }
 
 .linha-cadastro {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     margin-bottom: 10px;
-    gap: 12px;
+    gap: 0.2rem;
 }
 
 .cadastroCliente__dados {    
     color: var(--cor-terciaria);
-    font-family: var(--fonte-texto1);
+    font-family: var(--fonte-textoRedondo);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+.cadastroCliente__campo,
+.cadastroCliente__campo__cep,
+.cadastroCliente__campo__campo-menor {
+    box-sizing: border-box;
+    height: var(--altura-input);
+    padding: var(--padding-input) 0.3rem;
+    border: 1px outset var(--cor-bordainput);
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+.cadastroCliente__campo__campo-menor {
+    max-width: 3.5rem;
 }
 
 .cadastroCliente__campo {   
     display: grid;
     grid-column: 1/3;
-    gap: 0.5rem;   
-    border-radius: 7px;         /*borda redondinha*/
-    border-style: outset;
-    border-width: 1px;
-    border-color: var(--cor-bordainput);
-    width: auto;                 /*comprimento do input*/
-    padding: 5px 5%;
     flex: 3;
-    height: 20px;               /*altura do input*/
 }
 
-.cadastroCliente__campo:focus {
-    outline: none;
-    border-color: skyblue;
-    box-shadow: 0 0 10px skyblue;
-}
-
-
-.cadastroCliente__campo__campo-menor {
-    display: grid;
-    grid-column: 1/3;
-    gap: 0.5rem;   
-    max-width: 80px;
-    border-radius: 7px;
-    border-style: outset;
-    border-width: 1px;
-    border-color: var(--cor-bordainput);
-    padding: 5px 5%;
-    flex: 3;
-    height: 20px;
-}
-
+.cadastroCliente__campo:focus,
+.cadastroCliente__campo__cep:focus,
 .cadastroCliente__campo__campo-menor:focus {
     outline: none;
     border-color: skyblue;
     box-shadow: 0 0 10px skyblue;
+}
+
+.cadastroCliente__campo__cep::placeholder {
+    font-family: var(--fonte-textoRedondo);
+    font-size: 14px;
+    color: #bbb;
+    background: url("../imagens/lupabranca.svg") no-repeat;   
 }
 
 .linha-salvar {
@@ -315,7 +274,7 @@ input, select, textarea {
     /* justify-content: flex-start; */
     grid-column: 1 / span 1; /* mesma coluna do CPF */
     padding-left: 0;
-    margin-top: 10px;
+    margin-top: 0.6rem;
 }
 
 .botao-salvar {
@@ -338,6 +297,7 @@ input, select, textarea {
     transform: scale(1.05);
 }
 
+/*Clientes cadastrados ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .lista-clientes {
     display: flex;
     align-items: stretch;
@@ -346,7 +306,6 @@ input, select, textarea {
     padding: 20px;
 }
 
-/*Clientes cadastrados ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .hidden-coluna {
     display: none !important;
 }
@@ -375,6 +334,7 @@ input, select, textarea {
 .controle-colunas button:hover {
   background-color: var(--cor-principal);
 }
+
 /*FILTRO DE PESQUISA -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .filtro-linhas {
     font-weight: bold;
@@ -540,19 +500,14 @@ input, select, textarea {
 
 /*DARK MODE --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.botao-toggle {
-    background-color: transparent;
-    color: var(--cor-terciaria);
-    border: none;
-    padding: 6px 12px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+body.dark-mode .cabecalho__menu-hamburguer {
+    filter: invert(100%) brightness(200%);
 }
 
 .botao-toggle:hover {
     opacity: 0.5;
 }
+
 
 body.dark-mode .botao-salvar:hover {
     background-color: #39ac6d;
@@ -615,7 +570,7 @@ input:-webkit-autofill:focus {
 }
 
 
-/*TELA RESPONSIVA --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*tela home - curso alura*/
 @media (max-width: 1200px) {
@@ -625,7 +580,7 @@ input:-webkit-autofill:focus {
     }
 
     .cabecalho__menu {
-        justify-content: center;        /*centraliza na pagina*/
+        justify-content: center; 
     }
 
     .apresentacao {
@@ -637,58 +592,29 @@ input:-webkit-autofill:focus {
         width: auto;
     }
 
-
-/* Deixa a tela de formulario tudo em 1 coluna no celular */
-
-@media (max-width: 768px) {
-    .cabecalho {
-        padding: 2%;
-        width: auto;
-    }
-
-    .cabecalho__menu {
-        justify-content: center;        /*centraliza na pagina*/
-    }
-
-    .grid-formulario {
-        grid-template-columns: 1fr;
-    }
-
-    .form-group.wide {
-        grid-column: span 1;
-    }
-
-    .botao-salvar {
-        width: fit-content;
-    }
-    .cabecalho__menu {
-        justify-content: center;        /*centraliza na pagina*/
-        width: auto;
-    }
-    #tabelaClientes td,
-    #tabelaClientes th {
-        padding: 4px 6px;
-        font-size: 13px;
-        line-height: 1.2;   
-    }
-
-    #tabelaClientes th[data-col="acoes"],
-    #tabelaClientes th:last-child,
-    #tabelaClientes td:last-child {
-        width: 10%;
-        text-align: center;
-}
-}
-
 /* === TELAS MÉDIAS: Tablets (600px–991px) === */
-@media (max-width: 991px) and (min-width: 600px) {
+@media (max-width: 991px) and (min-width: 680px) {
     .cabecalho {
-        padding: 2%;
-        width: auto;
+        padding: 1%;  
+        width: 100%;
     }
 
     .cabecalho__menu {
-        justify-content: center;        /*centraliza na pagina*/
+        justify-content: space-between;        
+    } 
+
+    .lista-menu {
+        width: 80vh;
+    }
+
+    .cadastroCliente {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .cadastroCliente__campo,
+    .cadastroCliente__campo__cep,
+    .cadastroCliente__campo__campo-menor {
+        max-width: 100%;    
     }
 
     #tabelaClientes td:nth-child(1),
@@ -705,50 +631,60 @@ input:-webkit-autofill:focus {
     #tabelaClientes th:last-child {
         width: 10%;
     }
+
+    .form-group.wide {
+        grid-column: span 1;
+    }
+
+    .botao-salvar {
+        width: fit-content;
+    }
+
+    #tabelaClientes td,
+    #tabelaClientes th {
+        padding: 4px 6px;
+        font-size: 13px;
+        line-height: 1.2;   
+    }
+
+    #tabelaClientes th[data-col="acoes"],
+    #tabelaClientes th:last-child,
+    #tabelaClientes td:last-child {
+        width: 10%;
+        text-align: center;
+}
 }
 
-
-@media (min-width: 768px) {
+@media (max-width: 680px) {
     .cabecalho {
-        padding: 2%;
-        width: auto;
+        padding: 1%;  
+        width: 100%;
     }
 
     .cabecalho__menu {
+        justify-content: space-between;        
+    } 
+
+    .lista-menu {
+        width: 80vh;
+    }
+
+    .cadastroCliente {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;  
-        gap: 0.5rem;
-        padding: 1rem;     
+        flex-direction: column;
     }
 
-    .cabecalho__menu__link {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .linha-cadastro {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: center;
-    }
-
-    thead th {
-        font-size: 0.75rem;
-        white-space: nowrap;
-        padding: 6px 8px;
-        text-align: center;
-    }
-    
-    #tabelaCliente {
-        font-size: 0.8rem;
+    .cadastroCliente__campo,
+    .cadastroCliente__campo__cep,
+    .cadastroCliente__campo__campo-menor {
+        max-width: 100%;    
     }
 }
 
 
 /* === TELAS PEQUENAS: Celulares (≤599px) === */
 @media (max-width: 599px) {
-    .cabecalho {
+.cabecalho {
         padding: 2%;
         width: auto;
     }
@@ -767,32 +703,35 @@ input:-webkit-autofill:focus {
         padding: 0.5rem;
     }
 
-  /* FORMULÁRIO */
+    .lista-menu {
+        width: 100vh;
+    }
+
     .cadastroCliente {
         grid-template-columns: 1fr;
-        max-width: auto;
+
     }
 
     .linha-cadastro {
-        flex-direction: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: flex-start;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        align-items: stretch;
         gap: 0.2rem;
     }
 
     .cadastroCliente__dados {
-        width: auto;
-        font-size: 14px;
+        width: 100%;
+        gap: 0.5rem;
     }
 
     .cadastroCliente__campo {
-        width: auto;
-        font-size: 14px;
+        width: 100%;
+        gap: 0.5rem;
     }
 
-    /* .form-group.wide {
-       grid-column: 1;
-    } */
+    .cadastroCliente__campo__cep{
+        max-width: 50%;
+    }
 
     .form-group.small {
       max-width: 100%;
