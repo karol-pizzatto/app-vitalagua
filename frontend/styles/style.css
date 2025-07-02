@@ -119,11 +119,11 @@ input, select, textarea {
     display: flex;
     align-content: center;              /* alinha o conteudo ao centro em relação a imagem */
     justify-content: space-between;
-    gap: 82px;
+   
 }
 
 .apresentacao__conteudo {
-    width: 80%;                       /* largura do conteudo escrito no caso*/
+    width: 100%;                       /* largura do conteudo escrito no caso*/
     display: flex;
     flex-direction: column;            /* exibe o conteudo em coluna */
     gap: 40px;                         /* espaçamento entre os elementos do conteudo */
@@ -131,16 +131,18 @@ input, select, textarea {
 }
 
 .apresentacao__conteudo__titulo {
+    display: block;
+    width: 100%;
+    text-align: center;
     font-size: 2.25rem;                    /* tamanho da fonte do titulo */
     font-family: "Open Sans", sans-serif;  
-    color: var(--cor-terciaria); 
-    width: 100%; 
+    color: var(--cor-terciaria);  
 }
 
 .destaque-titulo {                       /* pode ser usado STRONG/SPAN para destaque de texto */
     color: var(--cor-principal);
     font-size: 2rem;
-}
+    }
 
 .apresentacao__conteudo__subtitulo {            /*no lugar de subtitulo é texto*/
     font-size: 1,5rem;
@@ -170,7 +172,8 @@ input, select, textarea {
     background-color: var(--cor-botao);         /* cor de fundo do botao */
     border: 2px dotted var(--cor-terciaria);
     color: var(--cor-branco);
-    width: 50%;                        /* largura do botao */
+    width: 20%;                          /* largura do botao */
+    height: 10%;                       
     text-align: center;                  /* centraliza o texto dentro do botao */
     border-radius: 6px;                  /* borda arredondada do botao */
     font-size: 1,5rem;    
