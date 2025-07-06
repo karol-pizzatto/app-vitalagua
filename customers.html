@@ -11,7 +11,7 @@
 
   <title>Vital Água - Clientes</title>
 </head>
-<body>
+<body id="topo">
   <header class="cabecalho">
     <div class="container__menu">
         <input type="checkbox" id="menu" class="container__botao">
@@ -42,7 +42,24 @@
   </header>
 
   <main>
+
     <section class="cadastroCliente">
+      <div class="cadastroCliente__titulo">Dados Cadastrais</div><br>
+      
+      <div class="cadastro__tipo">
+        <label class="checkbox-redondo">      
+          <input type="radio" id="pessoaFisica" name="pessoaTipo" value="F"> 
+          <span></span>
+          Pessoa física   
+        </label>
+
+        <label class="checkbox-redondo">      
+          <input type="radio" id="pessoaJuridica" name="pessoaTipo" value="J"> 
+          <span></span>
+          Pessoa jurídica   
+        </label>
+      </div>
+      <br>
       <!-- Nome -->
       <div class="linha-cadastro field" id="field-nome">
         <label class="cadastroCliente__dados" for="nomeCliente">Nome:</label>
@@ -90,12 +107,18 @@
         <label class="cadastroCliente__dados" for="complementoCliente">Complemento:</label>
         <input class="cadastroCliente__campo" type="text" id="complementoCliente" placeholder=" "/>
         <span class="error-message"></span>
-      </div>
-
+      </div><br>
+    
       <!-- Telefone -->
       <div class="linha-cadastro field" id="field-telefone">
         <label class="cadastroCliente__dados" for="telefoneCliente">Telefone:</label>
-        <input class="cadastroCliente__campo" type="text" id="telefoneCliente" placeholder="Telefone para contato"/>
+        <input class="cadastroCliente__campo campo-telefone" type="text" id="telefoneCliente" placeholder="Telefone para contato"/>
+      </div>
+
+      <!-- Celular -->
+      <div class="linha-cadastro field" id="field-celular">
+        <label class="cadastroCliente__dados" for="celularCliente">Celular:</label>
+        <input class="cadastroCliente__campo campo-celular" type="text" id="celularCliente" placeholder="Celular para contato"/>
         <span class="error-message"></span>
       </div>
 
@@ -113,6 +136,24 @@
       </div>
     </section>
   </main>
+
+<footer class="rodape">
+  <div class="rodape__container">
+    <div class="rodape__info">
+      <h4>Vital Água</h4>
+      <p>Controle de estoque com mobilidade e gestão inteligente.</p>
+    </div>
+    <div class="rodape__links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Suporte</a>
+      <a href="#topo" class="rodape__link">Voltar ao topo</a>
+    </div>
+    <div class="rodape__creditos">
+      <p>Desenvolvido por Ana Carolina © 2025</p>
+    </div>
+  </div>
+</footer>
 
   <script src="customers.js" defer></script>
   <script src="darkmode.js" defer></script>
